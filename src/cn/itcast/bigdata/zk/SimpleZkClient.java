@@ -20,6 +20,8 @@ public class SimpleZkClient {
 	private static final int sessionTimeout = 30000;
 	ZooKeeper zkClient = null;
 	
+	
+	
 	@Before
 	public void init() throws IOException {
 		zkClient = new ZooKeeper(connectString, sessionTimeout, new Watcher() {
@@ -61,6 +63,7 @@ public class SimpleZkClient {
 		
 		for (String child : children) {
 			System.out.println(child);
+			System.out.println("helloworld");
 		}
 		
 		Thread.sleep(Long.MAX_VALUE);
